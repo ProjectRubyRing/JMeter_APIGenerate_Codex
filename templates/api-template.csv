@@ -1,0 +1,6 @@
+﻿enabled,name,url,method,query_params,headers,body_type,body,connect_timeout_ms,response_timeout_ms,expected_status
+true,GET_health,http://127.0.0.1:8080/health,GET,"{""check"":""日本語""}","{""Accept"":""application/json""}",none,,10000,30000,200
+false,POST_json,http://127.0.0.1:8080/echo?existing=1,POST,"{""mode"":""test""}","{""Accept"":""application/json"",""X-Example"":""sample""}",json,"{""message"":""日本語"",""count"":1}",10000,30000,200-299
+false,POST_form,http://127.0.0.1:8080/echo,POST,"{""source"":""sample""}",{},form,"[{""name"":""item"",""value"":""A""},{""name"":""item"",""value"":""B""},{""name"":""text"",""value"":""日本語 & +""}]",10000,30000,200
+false,POST_raw,http://127.0.0.1:8080/echo,POST,{},"{""Content-Type"":""text/plain; charset=UTF-8""}",raw,"1行目
+2行目",10000,30000,200

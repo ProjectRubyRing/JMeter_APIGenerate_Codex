@@ -1,0 +1,9 @@
+* text=auto
+*.py text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=crlf
+*.md text eol=lf
+*.csv text eol=crlf
+*.xlsx binary
+*.jmx text eol=lf
+*.properties text eol=lf
